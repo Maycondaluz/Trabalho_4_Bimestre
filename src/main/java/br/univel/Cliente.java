@@ -7,6 +7,8 @@ public class Cliente {
 	private String endereco;
 	private String cidade;
 	private Estado estado;
+	
+	private String teste;
 	public int getId() {
 		return id;
 	}
