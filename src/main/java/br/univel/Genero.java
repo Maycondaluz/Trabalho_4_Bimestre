@@ -1,30 +1,19 @@
 package br.univel;
 
 public enum Genero {
-	
-	M("Paraná"), //
-	F("São Paulo"), //
-	I("Santa Catarina");//
-	
+	M("Masculino"),
+	F("Feminino");
 
+	//criado uma variavél do tipo nome
 	private String nome;
 
+	//criado um get para retornar o valor que está atribuido ao sexo
 	public String getNome() {
 		return nome;
 	}
-
-	private Genero(String nome) {
+	
+	//construtor da classe
+	private Genero(String nome){
 		this.nome = nome;
 	}
-	
-	public Genero valida(Object o){
-		if(o.toString().equals(M.nome))
-			return Genero.M;
-		else if(o.toString().equals(F.nome))
-			return Genero.F;
-		else if(o.toString().equals(I.nome))
-				return Genero.I;
-		return null;
-	}
-
 }

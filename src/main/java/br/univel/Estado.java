@@ -3,33 +3,44 @@ package br.univel;
 
 public enum Estado {
 
-	PR("Paraná"), //
-	SP("São Paulo"), //
-	SC("Santa Catarina"),//
-	RN("Recem nascido"),//
-	RJ("Rio de Janeiro");
+		AC("Acre"),
+		AL("Alagoas"),
+		AP("Amapá"),
+		AM("Amazonia"),
+		BA("Bahia"),
+		CE("Ceará"),
+		DF("Distrito Federal"),
+		ES("Espírito Santo"),
+		GO("Goiás"),
+		MA("Maranhão"),
+		MT("Mato Grosso"),
+		MS("mato Grosso do Sul"),
+		MG("Minas Gerais"),
+		PA("Pará"),
+		PB("Paraiba"),
+		PR("Paraná"),
+		PE("Pernambuco"),
+		PI("Piauí"),
+		RJ("Rio de Janeiro"),
+		RN("Rio Grande do Norte"),
+		RS("Rio Grande do Sul"),
+		RO("Rondônia"),
+		RR("Roraima"),
+		SC("Santa Catarina"),
+		SP("São Paulo"),
+		SE("Sergipe"),
+		TO("Tocantins");
+		
+		//criado uma nome para retorna qual o valor da sigla
+		private String nome;
 
-	private String nome;
-
-	public String getNome() {
-		return nome;
-	}
-
-	private Estado(String nome) {
-		this.nome = nome;
-	}
-	
-	public Estado valida(Object o){
-		if(o.toString().equals(PR.nome))
-			return Estado.PR;
-		else if(o.toString().equals(SP.nome))
-			return Estado.SP;
-		else if(o.toString().equals(SC.nome))
-				return Estado.SC;
-		else if(o.toString().equals(RN.nome))
-				return Estado.RN;
-		else if(o.toString().equals(RJ.nome))
-				return Estado.RJ;
-		return null;
-	}
+		//método get para retornar somente o valor
+		public String getNome() {
+			return nome;
+		}
+		
+		//construtor da classe que recebe por parametro uma tipo string 
+		private Estado(String nome){
+			this.nome = nome;
+		}
 }
